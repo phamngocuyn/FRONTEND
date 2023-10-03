@@ -1,0 +1,313 @@
+
+<div class="card">
+    <div class="card-top border-bottom text-center">
+         <a routerLink="/checkout/cart"> <i class="fa-solid fa-cart-shopping"></i></a>
+         <img routerLink="/" 
+            src="https://cdn.shopify.com/s/files/1/0636/9044/0949/files/Logo_PCX-line.png?v=1649735521&width=2048" alt=""
+        >
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="left border">
+                    <div class="row mt-4">
+                        <div class="" style="display: flex; justify-content: space-between;">
+                            <h1 class="header">Thông tin liên hệ</h1>
+                            <p>Bạn đã có tài khoản? <span routerLink="/auth/login">Đăng nhập</span></p>
+                        </div>
+                    </div>
+                    <form>
+                        <label for="country">Email:</label>
+                        <input placeholder="email">
+
+                        <input type="checkbox" id="save_card" class="align-left">
+                        <label for="save_card">Gửi cho tôi tin tức và ưu đãi qua email</label> <br>
+
+                        <h1 class="mt-4">Giao hàng:</h1>
+                        <div class="shiping">
+                            <div class="shipping-options">
+                                <div class="option-left">
+                                  <input type="checkbox" id="delivery" class="custom-checkbox">
+                                  <label for="delivery">Vận chuyển</label>
+                                </div>
+                                <div class="option-right">
+                                    <i class="fa-solid fa-van-shuttle"></i>
+                                </div>
+                            </div>
+                            <div class="shipping-options">
+                                <div class="option-left">
+                                  <input type="checkbox" id="pickup" class="custom-checkbox">
+                                  <label for="pickup">Nhận tại cửa hàng</label>
+                                </div>
+                                <div class="option-right">
+                                    <i class="fa-solid fa-shop"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="country">Quốc gia:</label>
+                            <input type="text" id="country" name="country" placeholder="country" required>
+                            <div class="invalid-feedback">Vui lòng nhập quốc gia.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="name-fields">
+                                <div class="name-field">
+                                    <label for="firstName">Tên:</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="firstName" required>
+                                    <div class="invalid-feedback">Vui lòng nhập tên.</div>
+                                </div>
+                                <div class="name-field">
+                                    <label for="lastName">Họ:</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="lastName" required>
+                                    <div class="invalid-feedback">Vui lòng nhập họ.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Công ty:</label>
+                            <input type="text" id="company" name="company" placeholder="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" id="address" name="address" placeholder="address" required>
+                            <div class="invalid-feedback">Vui lòng nhập địa chỉ.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="city-postal">
+                                <div class="city-field">
+                                    <label for="city">Thành phố:</label>
+                                    <input type="text" id="city" name="city" placeholder="city" required>
+                                    <div class="invalid-feedback">Vui lòng nhập thành phố.</div>
+                                </div>
+                                <div class="postal-field">
+                                    <label for="postalCode">Postal Code:</label>
+                                    <input type="text" id="postalCode" name="postalCode" placeholder="postalCode" required>
+                                    <div class="invalid-feedback">Vui lòng nhập postal code.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="phone" required>
+                            <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                        </div> 
+                        
+                        <input type="checkbox" id="save_card" class="align-left">
+                        <label for="save_card">Lưu lại thông tin</label> 
+
+                        <h2 class="mt-4">Phương thức vận chuyển:</h2>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Khách tự book Grab (TP.HCM)</label>
+                            </div>
+                            <div class="option-right">
+                                <p>Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="pickup" class="custom-checkbox">
+                              <label for="pickup">Miễn phí HCM (trong ngày)</label>
+                            </div>
+                            <div class="option-right">
+                                <p>Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Miễn phí toàn quốc (2 ~ 7 ngày)</label>
+                            </div>
+                            <div class="option-right">
+                              <p>Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="pickup" class="custom-checkbox">
+                              <label for="pickup">Siêu tốc HCM (dưới 2h)</label>
+                            </div>
+                            <div class="option-right">
+                              <p>50.000VND</p>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Ship nhanh toàn quốc (1 ~ 3 ngày)</label>
+                            </div>
+                            <div class="option-right">
+                              <p>120.000VND</p>
+                            </div>
+                        </div>
+
+                        <h1 class="mt-4">Thanh toán</h1>
+                        <p style="color: #535353;">Toàn bộ các giao dịch được bảo mật và mã hóa</p>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">OnePAY - Credit/ATM card/QR</label>
+                            </div>
+                            <div class="option-right">
+                                <div class="icons">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">OnePAY - Installment (Credit Card)</label>
+                            </div>
+                            <div class="option-right">
+                                <div class="icons">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Thanh toán khi nhận hàng (COD)</label>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Chuyển khoản</label>
+                            </div>
+                        </div>
+
+                        <h2 class="mt-4">Địa chỉ thanh toán</h2>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                              <input type="checkbox" id="delivery" class="custom-checkbox">
+                              <label for="delivery">Giống địa chỉ vận chuyển</label>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="option-left">
+                                <input type="checkbox" id="delivery" class="custom-checkbox" 
+                                        (change)="toggleAddress()">
+                                <label for="delivery">Sử dụng địa chỉ thanh toán khác</label>
+                            </div>
+                        </div>
+                    
+                        <div class="additional-address" style="display: none;" *ngIf="useDifferentAddress">
+                            <div class="form-group">
+                                <label for="country">Quốc gia:</label>
+                                <input type="text" id="country" name="country" required>
+                            </div>
+                    
+                            <div class="form-group">
+                                <div class="name-fields">
+                                    <div class="name-field">
+                                        <label for="firstName">Tên:</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="name-field">
+                                        <label for="lastName">Họ:</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="company">Công ty:</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="address">Địa chỉ:</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                    
+                            <div class="form-group">
+                                <div class="city-postal">
+                                    <div class="city-field">
+                                        <label for="city">Thành phố:</label>
+                                        <input type="text" id="city" name="city" required>
+                                    </div>
+                                    <div class="postal-field">
+                                        <label for="postalCode">Postal Code:</label>
+                                        <input type="text" id="postalCode" name="postalCode" required>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="compelet">
+                            <button class="btn btn-1 btn-primary"
+                                        data-bs-dismiss="offcanvas">
+                                        Hoàn tất đơn hàng
+                            </button>
+                        </div>
+                    </form>
+                </div>                        
+            </div>
+            <div class="col-md-5">
+                <div class="right border">
+                    <div class="d-flex" style="justify-content: space-between;">
+                        <div class="header">Order Summary</div>
+                        <p style="background-color: #3c619e; color: #fff; display: inline;padding: 5px; border-radius: 50%;">
+                            Item: {{ totalItems }}
+                        </p>
+                    </div>
+                    <div class="row item" *ngFor="let item of cartItems; let i=index;">
+                        <div class="col-3 align-self-center mt-4"><img class="img-fluid" [src]="item.imageUrl"></div>
+                        <div class="col-9">
+                            <div class="row text-muted" style="color: black; font-weight: 700;">{{ item.name }}</div>
+                            <div class="row">
+                                <p>{{ item.layout }}<span *ngIf="item.layout">/</span>
+                                    {{ item.color }}<span *ngIf="item.color">/</span>{{ item.switch }}
+                                </p>
+                            </div>
+                            <div class="row" style="margin-top: -18px;">
+                                <div class="col-6">
+                                    Qty: {{ item.quantity }}
+                                </div>
+                                <div class="col-6">
+                                    Price: {{ item.totalPrice }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="custom-input-container">
+                        <input type="text" class="custom-input" [(ngModel)]="discountCode" (input)="onDiscountCodeChange()" placeholder="Mã giảm giá">
+                        <button class="custom-button" [disabled]="isButtonDisabled">Áp dụng</button>
+                    </div>
+                    <div class="row lower">
+                        <div class="col text-left">Subtotal</div>
+                        <div class="col text-right">$ {{ totalPrices }}</div>
+                    </div>
+                    <div class="row lower">
+                        <div class="col text-left">Delivery</div>
+                        <div class="col text-right">Free</div>
+                    </div>
+                    <div class="row lower">
+                        <div class="col text-left"><b>Total to pay</b></div>
+                        <div class="col text-right"><b>$ {{ totalPrices }}</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <div>
+</div>
+</div>

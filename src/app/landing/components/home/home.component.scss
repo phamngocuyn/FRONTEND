@@ -1,0 +1,485 @@
+
+.content-banner{color: #ffffff;
+background:url(//www.phongcachxanh.vn/cdn/shop/files/Cherry-Xtrfy_26_of_64.jpg?v=1694396919&width=2800);
+min-height:400px;
+height:100%;
+position: relative;
+background-position: center center;
+background-size: cover;
+padding-top: 125px;
+height: 86vh;
+}
+.content-banner p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.content-banner h1{
+    font-size: 60px;
+    font-weight: 400;
+}
+.content-banner button{
+    background-color: #fff;
+    color:#000;
+    padding: 18px 45px;
+    border-radius: 40px;
+    font-weight: 700;
+}
+.content-banner button:hover{
+    border: 3px #fff solid;
+    transition: 0.2s;
+    background-color: transparent;
+    color: #fff;
+}
+
+.header{
+position: relative;
+width: 100%;
+}
+
+.header-inner{
+position: absolute;
+top: 0;
+left: 0;
+width:100%;
+z-index: 99;
+background-color: transparent;
+}
+
+.logo{color:#ffffff;
+}
+.navbar-brand img{
+    width: 230px;
+    height: 61px;
+    color: rgb(255, 255, 255);
+}
+.nav-item .nav-link{
+display: block;
+line-height: 36px;
+text-transform: capitalize;
+font-size: 17px;
+font-weight: 700;
+color: #ffffff;
+transition: 0.15s;}
+
+.nav-item .nav-link:hover{color: #FE4066;}
+
+.header-btn{color:#ffffff;
+border-radius: 30px;
+background-color:gray;
+border:none;
+font-weight: 500;
+outline: none;
+font-size: 15px;
+padding:7px 22px;
+transition: 0.5s;
+}
+
+
+.header-btn:hover{background-color: #FE4066;
+cursor: pointer;}
+
+.navbar-scroll{
+background-color: rgb(39, 39, 39);
+padding-top: 25px;
+padding-bottom: 25px;
+position: fixed;
+top:0;
+z-index: 99;
+box-shadow:0px 1px 10px rgba(0,0,0,0.4);
+transition-duration: 0.6s; 
+}
+
+.navbar-scroll .nav-item .nav-link{
+    color: rgb(255, 255, 255);
+}
+
+.navbar-scroll .header-btn{color: #ffffff;
+background-color: #fe4066;
+}
+
+.navbar-scroll .logo{color: #000;
+font-weight: 500;
+}
+
+.first-title{
+	text-transform: capitalize;
+}
+
+section{background-color: white;
+padding: 4rem 0rem 4rem;
+}
+section:nth-of-type(even){background-color: #fe4066;
+color: white;}
+
+
+
+
+.model-sanpham{
+    width: 420px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.model-sanpham a{
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+}
+.model-sanpham1{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.model-search{
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 570px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.model-search .offcanvas-header{
+    border-bottom: #333 2px solid;
+}
+.model-search .offcanvas-header input {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.model-cart{
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 570px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.model-cart-body{
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+
+
+/*mặt hàng*/
+.sectors{
+    position: relative;
+     overflow: hidden;
+}
+.sectors img{
+    align-items: center;
+    width: 260px;
+    height: 260px; 
+    transition: transform 0.3s ease;
+}
+.sectors img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.sectors p{
+    margin-top: -60px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*thuong hieu*/
+
+.label img{
+    width: 120px;
+    height: 36px;
+}
+.label img:hover{
+    transform: scalex(1);
+    cursor: pointer;
+}
+.label .item-container{
+    background-color: rgb(242, 242, 242);
+     padding: 50px 66px;
+     cursor: pointer;
+}
+.label h2{
+    font-size: 42px;
+    font-weight: 400;
+}
+
+/*quảng cáo*/
+.advertisement{
+    background-color: rgb(39, 39, 39);
+    min-height: 200vh;
+    padding-bottom: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  .video-container video:hover{
+    cursor: pointer;
+  }
+.img-fluid{
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+.img-fluid img{
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.img-fluid:hover img{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+.img-fluid .name{
+    position: absolute;
+    color: #fff;
+    bottom: 15%;
+    right: 10%;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+/*pulsar*/
+.pulsar{
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: auto;
+    background-color: rgb(190, 189, 185);
+}
+.pulsar h1{
+    font-size: 50px;
+    font-weight: 400;
+}
+.pulsar .box{
+    border-radius: 10px;
+    width: 65%;
+    height: 70vh;
+    background-color: #ffffff;
+
+}
+.pulsar .box img{
+    padding: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+}
+.pulsar .box p{
+    font-weight:bold;
+}
+.box-body{
+    text-align: center;
+}
+.pulsar .box .text{
+    position: absolute;
+    left: 60%;
+}
+.pulsar img{
+    border-radius: 12px;
+}
+
+/*ban phim*/
+.filco{
+    background-color: rgb(242, 242, 242);
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+.filco img{
+    width: 100%;
+    border-radius: 12px;
+}
+.filco .row-1 img{
+    height: 75vh;
+}
+.filco .row-2 img{
+    height: 40vh;
+}
+.filco .row-3 img{
+    height: 40vh;
+}
+
+
+.item-container {
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+@media (max-width: 600px) {
+        .content-banner{color: #ffffff;
+            min-height:400px;
+            height:100%;
+            height: 62vh;
+        }
+        .content-banner p{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .content-banner h1{
+            font-size: 30px;
+            font-weight: 400;
+        }
+        .content-banner button{
+            padding: 18px 45px;
+            font-weight: 700;
+        }
+        .banner-con{
+            margin-top: -100px !important; 
+        }
+}
+
+@media (max-width: 768px) {
+    .label h2 {
+        font-size: 28px; 
+    }
+    .label .row-cols-xl-5 .col-md-3 {
+        flex: 0 0 50%; 
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .label img{
+        max-width: 80%; 
+    }
+
+    .label .item-container{
+        padding: 40px 0px; 
+    }
+    .label .row-cols-xl-5 .col-md-3 {
+        flex: 0 0 50%; 
+        max-width: 50%;
+    }
+    // .advertisement{
+    //     margin-top: -100px;
+    // }
+    // .edition1{
+    //     margin-left: 45px;
+    // }
+    // .edition1 .name1{
+    //     font-size: 14px;
+    //     width: 50px;
+    // }
+}
+
+/* Đảm bảo ảnh ra giữa theo chiều ngang và điều chỉnh kích thước chữ */
+@media (max-width: 600px) {
+    .advertisement .col-video video,
+    .advertisement .col-md-3 img,
+    .pulsar .box img,
+    .filco img {
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  
+    .advertisement .name,
+    .pulsar h1,
+    .pulsar .box p,
+    .filco .name {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  
+    .advertisement .name,
+    .filco .name {
+      bottom: 10%;
+      right: 5%;
+      font-size: 12px;
+    }
+  
+    .advertisement .edition1,
+    .advertisement .edition1 img,
+    .advertisement .edition1 .name1 {
+      height: auto;
+    }
+  
+    .pulsar .box .text {
+      position: static;
+      transform: none;
+      text-align: center;
+      margin-top: 20px;
+      left: auto;
+    }
+  }
+  
+
+  .evaluate{
+    margin-top: 150px;
+    margin-bottom: 120px;
+  }
+  .evaluate .col-md-6 img{
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 65px;
+    margin-left: 15px;
+  }
+  .evaluate .col-md-3{
+    color: #339999;
+    position: relative;
+  }
+  .evaluate .col-md-3 p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px solid #339999;
+    padding-right: 25px;
+  }
+  input:focus{
+    box-shadow: none;
+    border: 1px #333 solid;
+  }
+  
+  
+  .utilities{
+    margin-bottom: 60px;
+  }
+  .utilities i{
+    font-size: 25px;
+    color: #fff;
+    background-color: #3c619e;
+    padding: 30px;
+    border-radius: 50%;
+  }
+  .utilities h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  .utilities p{
+    margin-top: 15px;
+  }

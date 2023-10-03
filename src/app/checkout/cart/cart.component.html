@@ -1,0 +1,112 @@
+
+
+<div class="list-cart">
+    <div class="container">
+        <div class="row header mt-5">
+            <div class="col-5 mx-auto">
+                <h1>Giỏ hàng</h1>
+                <p>Bạn được giao hàng miễn phí!</p>
+            </div>
+        </div>
+        <div class="row table-list mt-4">
+            <div class="col-md-12 col-lg-8">
+                <div class="row row-list1">
+                    <div class="col-md-7 text-header">Sản phẩm</div>
+                    <div class="col-md-2 text-header">Số <br>lượng</div>
+                    <div class="col-md-3 text-header text-end">Tổng</div>
+                </div>
+                <div class="row row-list2 mt-5" *ngFor="let item of cartItems; let i=index;">
+                    <div class="col-md-7">
+                        <div class="img-product">
+                            <img [src]="item.imageUrl" alt="">
+                        </div>
+                        <div class="text-product text-start">
+                            <h2>{{ item.name }}</h2>
+                            <h3>{{ item.totalPrice }}₫</h3>
+                            <p>{{ item.layout }}<span *ngIf="item.layout">/</span>
+                                {{ item.color }}<span *ngIf="item.color">/</span>{{ item.switch }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" style="text-align: center;" [value]="item.quantity" 
+                                (change)="updateQuantity(i, $event)"
+                        />
+                        <div class="btn-remove" (click)="removeItemFromCart(i)">Bỏ</div>
+                    </div>
+                    <div class="col-md-3 text-end" >{{ item.totalPrice }} VND</div>
+                </div>
+    
+                
+            </div>
+            <div class="col-md-12 col-lg-3 table-sum">
+                <div class="row row1 mt-5">
+                    <div class="col">Tổng phụ</div>
+                    <div class="col text-end">{{ totalPrices }}₫</div>
+                </div>
+                <div class="row row2 mt-2">
+                    <div class="col-3">Tổng</div>
+                    <div class="col-9 text-end">{{ totalPrices }} VND</div>
+                </div>
+                <div class="row row3 mt-2">
+                    <div class="col">Đã bao gồm thuế; <span style="border-bottom: 1px solid #ccc;">Phí ship</span> sẽ được tính khi thanh toán</div>
+                </div>
+                <div class="row row4 mt-3">
+                    <div class="col-12">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="row row5 mt-4">
+                    <div class="col"><button class="btn btn-1 btn-primary"><i class="fa-solid fa-lock" style="margin-right: 5px;"></i>Thanh toán</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="evaluate">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 text-end mt-3">
+                <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star" style="margin-right: 5px;"></i>483 đánh giá
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/auth/platinum.svg?auto=format" alt="">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tran/platinum.svg?auto=format" alt="">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/ver_rev/gold.svg?auto=format" alt="">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/mon_rec/gold.svg?auto=format" alt="">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tops/5-percent.svg?auto=format" alt="">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tops_trend/5-percent.svg?auto=format" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="utilities">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-3">
+                <i class="fas fa-truck"></i>
+                <h1>Mua sắm không chờ đợi!</h1>
+                <p>Giao hàng siêu tốc chỉ trong 2 giờ</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-gift"></i>
+                <h1>Mua sắm thông minh!</h1>
+                <p>Giao hàng miễn phí cho đơn hàng từ 1.000.000đ trở lên</p>
+            </div>
+            <div class="col-md-3">
+                <i class="far fa-smile"></i>
+                <h1>An tâm tuyệt đối!</h1>
+                <p>Bảo hành nhanh chóng, chỉ trong 15 phút</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-camera"></i>
+                <h1>Mua sắm linh hoạt!</h1>
+                <p>Trả góp hoặc mua trước trả sau, đơn giản và nhanh chóng</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

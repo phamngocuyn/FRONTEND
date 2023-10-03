@@ -1,0 +1,345 @@
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 34);
+    font-size: 0.8rem;
+}
+.card{
+    max-width: 100%;
+    margin: 2vh;
+}
+.card-top{
+    padding: 0.7rem 5rem;
+}
+.card-top a{
+    float: left;
+    margin-top: 0.7rem;
+}
+.card-top img{
+    width: 230px;
+    height: 61px;
+    color: #f2f2f2;
+}
+#logo{
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.card-body{
+    padding: 0 5rem 5rem 5rem;
+    // background-image: url("https://i.imgur.com/4bg1e6u.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+@media(max-width:768px){
+    .card-body{
+        padding: 0 1rem 1rem 1rem;
+        // background-image: url("https://i.imgur.com/4bg1e6u.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }  
+    .card-top{
+        padding: 0.7rem 1rem;
+    }
+}
+.row{
+    margin: 0;
+}
+#three{
+    border-radius: 1rem;
+        width: 22px;
+    height: 22px;
+    margin-right:3px;
+    border: 1px solid blue;
+    text-align: center;
+    display: inline-block;
+}
+#payment{
+    margin:0;
+    color: blue;
+}
+.icons{
+    margin-left: auto;
+}
+form span{
+    color: rgb(179, 179, 179);
+}
+form{
+    padding: 2vh 0;
+}
+input{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 5px;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+input:focus::-webkit-input-placeholder
+{
+      color:transparent;
+}
+.header{
+    font-size: 1.5rem;
+}
+.left{
+    background-color: #ffffff;
+    padding: 2vh;   
+}
+.left img{
+    width: 2rem;
+}
+.left .col-4{
+    padding-left: 0;
+}
+.right .item{
+    padding: 0.3rem 0;
+}
+.right{
+    background-color: #ffffff;
+    padding: 2vh;
+}
+.col-8{
+    padding: 0 1vh;
+}
+.lower{
+    line-height: 2;
+}
+.btn{
+    background-color: rgb(23, 4, 189);
+    border-color: rgb(23, 4, 189);
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 4vh 0 1.5vh 0;
+    padding: 1.5vh;
+    border-radius: 0;
+}
+.btn:focus{
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none; 
+}
+.btn:hover{
+    color: white;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+input[type=checkbox]{
+    width: unset;
+    margin-bottom: unset;
+}
+#cvv{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.575) , rgba(255, 255, 255, 0.541)), url("https://img.icons8.com/material-outlined/24/000000/help.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+} 
+#cvv:hover{
+
+}
+
+.card-body .shipping-options {
+    display: flex;
+    align-items: center;
+    // margin-bottom: 1rem;
+    border: 1px solid #ccc; /* Tạo border */
+    padding: 0.5rem; /* Khoảng cách bên trong border */
+  }
+  
+  .card-body .shipping-options .option-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .card-body .shipping-options .option-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+  }
+  
+  .card-body .shipping-options .custom-checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.name-fields {
+    display: flex;
+}
+
+.name-field {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.city-postal {
+    display: flex;
+}
+
+.city-field,
+.postal-field {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    display: none;
+}
+
+.invalid-feedback.active {
+    display: block;
+}
+
+
+// sử dụng địa chỉ thanh toán khác 
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.name-fields {
+    display: flex;
+}
+
+.name-field {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.city-postal {
+    display: flex;
+}
+
+.city-field,
+.postal-field {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.additional-address {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.left .btn-2{
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom:  17px;
+    background-color: #3c619e;
+    border-radius: 40px;
+    border: none; /* Loại bỏ viền */
+    box-shadow: 0px 0px 0px 2px #3c619e; /* Thêm viền giả tạo */
+    transition: box-shadow 0.5s ease; /* Hiệu ứng cho box-shadow */
+  }
+  .left .btn-2:hover{
+    background-color: #fff;
+    color: #3c619e;
+    box-shadow: 0px 0px 0px 2px  #3c619e;
+    transition: opacity 0.5s ease;
+  }
+
+.card-body h1{
+    font-size: 20px;
+    font-size: 600;
+}
+.left span{
+    color: #3c619e;
+}
+.left span:hover{
+    border-bottom: 1px #3c619e solid;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card-body h2{
+    font-size: 16px;
+    font-size: 600;
+}
+.left button{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #375a91;
+}
+.left button:hover{
+    background-color: #3c619e;
+}
+
+
+.custom-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.custom-button {
+    background-color: #375a91;
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.custom-button:disabled {
+    background-color: #fff;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(51, 51, 51) 0px 0px 0px 1px;
+}

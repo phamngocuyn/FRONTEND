@@ -1,0 +1,207 @@
+  <!--Sản phẩm mới và sắp về-->
+  
+  <div class="product">
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <h2 class="title">Sản phẩm vừa bán</h2>
+        </div>
+        <div class="col-3 text-end showmore" style="font-size: 16px; font-weight: 500;">
+          <p routerLink="/new_product">xem thêm</p>
+        </div>
+      </div>
+      <div class="row align-items-start">
+        <div
+          class="product-col col-6 col-lg-3 col-md-4 mt-4 mb-4"
+          *ngFor="let item of newProduct; let i = index"
+        >
+          <div *ngIf="i < 4">
+            <p class="status" *ngIf="item.statusProduct === 'hết hàng'">{{item.statusProduct}}</p>
+          <div class="image-container mb-5">
+            <img
+            [src]="mainImage || (item.options[0].layout[0].optioncolor.length > 0 ? item.options[0].layout[0].optioncolor[0].url : '')"
+              alt="{{ item.name }}"
+              class="original-image"
+              [routerLink]="['product-detail', item.route]"
+            />
+            <button
+              class="btn btn-primary view-more"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasBottom11"
+              aria-controls="offcanvasBottom"
+              (click)="openCart(item)"
+            >
+              + Thêm nhanh
+            </button>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="name-product" href="#">{{ item.name }}</p>
+            <div class="star d-flex">5.0<i class="fa fa-star"></i></div>
+          </div>
+          <p class="price-product mt-1">{{ item.options[0].layout[0].optioncolor[0].optionswitch[0].price }}₫</p>
+          <div class="option-img">
+            <div class="row text-start">
+              <div class="col-md-3 col-4" *ngFor="let color of item.options[0]?.layout[0]?.optioncolor">
+                <img
+                  *ngIf="(item.options[0]?.layout[0]?.optioncolor).length > 1"
+                  class="img-fluid"
+                  [ngClass]="{ 'selected': color.url === selectedColor }"
+                  [src]="color.url"
+                  alt="{{ item.name }}"
+                  (click)="changeMainImage(color.url)"
+                />
+              </div>
+            </div>
+          </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <!--cart-mua hàng-->
+  <div
+    class="offcanvas offcanvas-bottom model-cart1 ms-auto"
+    tabindex="-1"
+    id="offcanvasBottom11"
+    aria-labelledby="offcanvasBottomLabel"
+    [ngClass]="{ show: isCartOpen }"
+  >
+    <div class="offcanvas-body mt-3">
+      <div class="offcanvas-headers">
+        <div class="body">
+          <img [src]="selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.url" alt="{{ selectedItem?.name }}" />
+          <div class="name-price">
+            <h3>{{ selectedItem?.name }}</h3>
+            <p>Giá: {{ selectedPrice || selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.optionswitch[0]?.price }}₫</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          (click)="closeCart()"
+        ></button>
+      </div>
+  
+      <div class="row text-center mt-3" *ngIf="(selectedItem?.options[0]?.layout).length < 2">
+        <div class="col">
+          <p style="font-size: 16px; color: rgb(53, 49, 49); font-weight: 400">
+            Layout: {{ selectedLayout || (selectedItem?.options[0]?.layout).length < 2 ?
+                       selectedItem?.options[0]?.layout[0].name : ""}}
+          </p>
+        </div>
+      </div>
+      <div class="row btn-layout text-center mb-3" *ngIf="(selectedItem?.options[0]?.layout).length < 2">
+        <div class="col-2" *ngFor="let layoutItem of selectedItem?.options[0]?.layout">
+          <button 
+            (click)="selectLayout(layoutItem)" class="btn mt-2"
+            [ngStyle]="{ 
+                        'border-color': selectedlayoutItem === layoutItem ? '#333' : 'initial',
+                        'box-shadow': shouldApplyLayoutBoxShadow(layoutItem) ? '0 0 10px rgba(255, 0, 0, 0.5)' : 'none'
+                      }"
+              >{{ layoutItem.name }}
+          </button>
+        </div>
+      </div>
+  
+      <div class="row text-center mt-3" *ngIf="(selectedItem?.options[0]?.layout[0]?.optioncolor).length > 1">
+        <div class="col">
+          <p style="font-size: 16px; color: rgb(53, 49, 49); font-weight: 400">
+            Color: {{ selectedColor || (selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.name) }}
+          </p>
+        </div>
+      </div>
+      <div class="row btn-color text-center mb-3" *ngIf="(selectedItem?.options[0]?.layout[0]?.optioncolor).length > 1">
+        <div class="col-4" *ngFor="let colorItem of selectedItem?.options[0]?.layout[0]?.optioncolor">
+          <button 
+            (click)="selectColor(colorItem)" class="btn mt-2"
+            [ngStyle]="{ 
+                      'box-shadow': shouldApplyBoxShadow(colorItem) ? '0 0 10px rgba(255, 0, 0, 0.5)' : 'none'
+                      }"
+              >
+              <img [src]="colorItem.url" alt="{{colorItem.name}}" (click)="handleColorItemClick(colorItem)">
+          </button>
+        </div>
+      </div>
+  
+      <div class="row text-center mt-3" *ngIf="(selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.optionswitch).length > 0">
+        <div class="col">
+          <p style="font-size: 16px; color: rgb(53, 49, 49); font-weight: 400">
+            Switch: {{ selectedSwitch || (selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.optionswitch[0]?.name)}}
+          </p>
+        </div>
+      </div>
+      <div class="row btn-switch text-center mb-3" 
+            *ngIf="(selectedItem?.options[0]?.layout[0]?.optioncolor[0]?.optionswitch).length > 0">
+        <div class="col-4" 
+            *ngFor="let switchItem of selectedSwitches"
+        >
+          <button 
+            (click)="selectSwitch(switchItem)" class="btn mt-2"
+            [ngStyle]="{ 
+                        'border-color': selectedSwitchItem === switchItem ? '#333' : 'initial',
+                        'box-shadow': shouldApplySwitchBoxShadow(switchItem) ? '0 0 10px rgba(255, 0, 0, 0.5)' : 'none'
+                      }"
+              >{{ switchItem.name }}
+          </button>
+        </div>
+      </div>
+  
+      <div class="row buy-cart mt-5">
+        <div class="col-12">
+          <button class="btn btn-primary" (click)="selectBuy(); isOldCartOpen = false;">Chọn mua</button>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  <div
+    class="offcanvas offcanvas-bottom model-cart1 ms-auto"
+    tabindex="-1"
+    id="offcanvasNewCart"
+    aria-labelledby="offcanvasNewCartLabel"
+    [ngClass]="{ show: isNewCartOpen }"
+    *ngIf="addedCartItem"
+  >
+    <div class="offcanvas-body mt-3">
+      <!-- Hiển thị thông báo đã thêm vào giỏ hàng -->
+      <div class="row text-center">
+        <div class="col" style="color: rgb(103, 185, 21);">
+          <p><i class="fa-solid fa-check" style="margin-right: 8px;"></i>Đã thêm vào giỏ hàng</p>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          (click)="isNewCartOpen = false"
+        ></button>
+      </div>
+      <!-- Hiển thị thông tin sản phẩm đã chọn mua -->
+      <div class="offcanvas-headers pb-4 mt-4">
+        <div class="body">
+          <img [src]="addedCartItem?.imageUrl" alt="" />
+          <div class="name-price">
+            <h3>{{ addedCartItem?.name }}</h3>
+            <p>Giá: ₫{{ addedCartItem?.price }}</p>
+            <p>Switch: {{ addedCartItem?.switch }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Nút Xem giỏ hàng -->
+      <div class="row buy-cart mt-5 d-flex justify-content-center">
+        <div class="col-4">
+          <button class="btn btn-primary" routerLink="checkout/cart">Xem giỏ hàng</button>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-primary">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

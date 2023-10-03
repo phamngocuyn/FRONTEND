@@ -1,0 +1,39 @@
+footer{
+    background-color: rgb(242, 242, 242);
+    flex-wrap: nowrap;
+}
+.footer-top{
+    padding-bottom:  64px;
+    padding-top: 64px;
+}
+footer p{
+    
+    font-size: 16px;
+    font-weight: 700;
+}
+footer h1{
+    font-weight: 400;
+}
+
+footer h2{
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(39, 39, 39, 0.7);
+    word-spacing: 3px;
+}
+footer h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(39, 39, 39, 0.7);
+    margin-top: 130px;
+}
+footer input{
+    margin-top: 20px;
+    padding-left: 16px;
+    height: 60px;
+    width: 80%;
+    outline: none;
+    border: rgba(39, 39, 39, 0.7) 0.5px solid;
+    border-radius: 5px;
+}

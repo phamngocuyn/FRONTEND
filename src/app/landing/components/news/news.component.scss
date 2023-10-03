@@ -1,0 +1,25 @@
+header{
+    background-color: rgba(39, 39, 39, 0.05);
+}
+header h1{
+    font-size: 60px;
+    font-weight: 400;
+}
+header h2{
+    font-size: 16px;
+    font-weight: 700;
+}
+header input{
+    outline: none;
+    border: 0.2px #c4b9b9 solid;
+    background-color:rgba(143, 127, 127, 0.05);
+    width: 330px;
+    height: 60px;
+}
+header button{
+    color: #fff;
+    background-color: rgb(60, 97, 158);
+    height: 60px;
+    width: 120px;
+    border-radius: 30px;
+}

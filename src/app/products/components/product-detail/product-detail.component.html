@@ -1,0 +1,610 @@
+<div class="order" *ngIf="product">
+    <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-1">
+        <div class="image-list">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 1"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 2"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAFMG8fbGcge8epZsd6ra6zSEMDtGxnsrUuQ&usqp=CAU"
+            alt="Image 3"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 gx-5">
+        <div class="display-image">
+          <img
+            id="displayed-img"
+            class="centered-image"
+            [src]="product.options[0].layout[0].optioncolor[0].url"
+            alt="Displayed Image"
+          />
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="type">
+          <p>{{product.brand}}</p>
+        </div>
+        <div class="name">
+          <p>{{ product.name }}</p>
+        </div>
+        <div class="price">
+          <p style="color: rgb(246, 61, 61); font-size: 20px;">
+            {{ selectedPrice || product.options[0].layout[0].optioncolor[0].optionswitch[0].price }}₫
+          </p>
+          <p class="star" style="font-size: 16px;">5.0<i style="color: #eddc1d;" class="fa fa-star"></i></p>
+        </div>
+        <div class="description">
+          <div class="header">
+            <p class="my-4">Trước đây màu sắc Asagi đặc trưng Nhật Bản chỉ có trên Majestouch Minila-R, nay đã có mặt trên Majestouch 2SC!</p>
+          </div>
+          <div class="body">
+            <p class="my-4">- Thiết kế Tenkeyless và Fullsize tiêu chuẩn dành cho bạn cần bàn phím cơ gọn gàng hoặc đầy đủ phím số để xử lý số liệu.
+            </p>
+            <p class="my-4">- Kết nối cáp USB liền với độ trễ rất thấp giúp bạn chơi game hoặc gõ phím nhanh không độ trễ.</p>
+            <p class="my-4">- Chất liệu keycap PBT Doubleshot siêu bền với khả năng chống phai ký tự, nhìn rõ kể cả bàn phím dùng được 5 năm.</p>
+          </div>
+        </div>
+        <div class="designLocation">
+          <p>Designed in Japan</p>
+        </div>
+        <div class="guarantee mt-4 mb-4">
+          <p>Bảo hành: 60 năm đổi mới</p>
+        </div>
+        <div class="layouts mt-1">
+            <p><span>Layout:</span>
+              {{selectedLayout || product.options[0].layout[0].name}}
+            </p>
+            <div class="row btn-layout  mb-3">
+              <div class="col-3" *ngFor="let layoutItem of product.layouts">
+                <button  class="btn" (click)="selectLayout(layoutItem)" (click)="selectLayoutPath(layoutItem)">
+                  {{ layoutItem.name }}
+                </button>
+              </div>
+            </div>
+        </div> 
+        <!-- *ngFor="let layoutItem of product.options[0].layout" -->
+        <div class="color">
+            <p><span>Color:</span> 
+              {{ selectedColor || (product.options[0].layout[0].optioncolor[0].name) }}
+            </p>
+            <div class="row btn-layout  mb-3">
+              <div class="col-3" *ngFor="let colorItem of product.options[0].layout[0].optioncolor">
+                <img  [src]="colorItem.url" (click)="selectColor(colorItem)" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="switch" *ngIf="selectedSwitches && selectedSwitches.length > 0">
+            <p><span>Switch:</span>
+              {{ selectedSwitch || (product.options[0].layout[0].optioncolor[0].optionswitch[0].name)}}
+            </p>
+            <div class="row btn-layout mb-3">
+              <div class="col-4" *ngFor="let switchItem of selectedSwitches">
+                <button class="btn" [class.selected]="shouldApplySwitchBoxShadow(switchItem)" (click)="selectSwitch(switchItem)">
+                  {{ switchItem.name }}
+                </button>
+              </div>
+            </div>
+          </div>
+        <div class="quantity">
+          <p><span>Số lượng: </span></p>
+          <div class="quantity-button">
+            <h1 class=" decrease" (click)="decreaseQuantity()">-</h1>
+            <input  class="quantity-input" [(ngModel)]="quantity" min="1">
+            <h1 class="increase" (click)="increaseQuantity()">+</h1>
+          </div>
+        </div>
+        <div class="meseges mt-4">
+          <i class="fa-sharp fa-solid fa-circle-exclamation mb-3"></i> <p>chỉ còn 2 sản phẩm</p>
+        </div>
+        <div class="btn-buy mt-4">
+          <button class="btn" (click)="selectBuy();">Chọn mua</button>
+        </div>
+        <div class="overviewOptions mt-5">
+          <div class="header">
+            <p><i class="fa-solid fa-mug-hot"></i>Dành cho bàn phím cơ Filco Majestouch 2SC, 2SS, Lumi S</p>
+          </div>
+          <div class="body mt-4">
+            <p>- Hướng dẫn sử dụng Filco Majestouch 2SS/2SC/Lumi S</p>
+            <p>- Hướng dẫn chọn bàn phím cơ Filco</p>
+            <p>- Sự khác nhau giữa các loại switch</p>
+            <p>- Hướng dẫn vệ sinh bàn phím cơ Filco</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="infor my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 content">
+        <p class="name">Bàn phím cơ Filco Majestouch 2SC - Tenkeyless</p>
+        <h1 class="location">Bàn phím cơ siêu bền từ Nhật Bản</h1>
+        <p class="description">Xuất thân từ Nhật Bản - đất nước nổi tiếng với các sản phẩm nồi đồng cối đá, độ bền vượt trội mà bạn yên tâm sử dụng từ năm này qua năm nọ và Filco không phải ngoại lệ. Các sản phẩm bàn phím cơ Filco được thiết kế tối giản nhưng chăm chút từng chi tiết về phần cứng, linh kiện nhằm đạt độ bền tối đa mà bột bàn phím cơ có thể đạt được. 5 năm, 10 năm,... thời gian cũng không làm khó được bàn phím cơ Filco.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="box">
+          <div class="row">
+            <div class="col-4 mt-4">
+              <h2>Kích thước</h2>
+            </div>
+            <div class="col-8 mt-4">
+              <p>TKL: 357 x 137 x 37mm (49mm với chân nâng)</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h2>Trọng lượng</h2>
+            </div>
+            <div class="col-8">
+              <p>TKL: 980g</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h2>Keycap</h2>
+            </div>
+            <div class="col-8">
+              <p>PBT Doubleshot</p>
+              <p>OEM Profile</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h2>Switch</h2>
+            </div>
+            <div class="col-8">
+              <p>Cherry MX Blue (50g, có khấc, có tiếng click)</p>
+              <p>Cherry MX Brown (45g, có khấc, không tiếng click)</p>
+              <p>Cherry MX Red (45g, không khấc, không tiếng click)</p>
+              <p>Cherry MX Silent (45g, không khấc, ít âm thanh)</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h2>Mạch</h2>
+            </div>
+            <div class="col-8">
+              <p>Chất liệu FR-4 sợi thủy tinh 2 lớp</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h2>Kết nối</h2>
+            </div>
+            <div class="col-8">
+              <p>USB - Cáp liền</p>
+            </div>
+          </div>
+          <div class="row" *ngIf="showMore"> 
+            <div class="row mt-4">
+              <div class="col-4">
+                <h2>Tương thích</h2>
+              </div>
+              <div class="col-8">
+                <p>Windows</p>
+                <p>MacOS</p>
+                <p>Linux</p>
+                <p>(Yêu cầu cổng USB)</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-4">
+                <h2>Thông số khác</h2>
+              </div>
+              <div class="col-8">
+                <p>Layout TKL: rút gọn cụm phím số tiết kiệm không gian</p>
+                <p>Layout Fullsize: đầy đủ phím bao gồm cụm phím số</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-4">
+                <h2>Phụ kiện kèm theo</h2>
+              </div>
+              <div class="col-8">
+                <p>3 x Keycap</p>
+                <p>1 x Đầu chuyển PS/2</p>
+                <p>1 x Tấm phủ bảo vệ</p>
+                <p>1 x Keypuller</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-4">
+                <h2>Thương hiệu</h2>
+              </div>
+              <div class="col-8">
+                <p>Filco, Designed in Japan</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-4">
+                <h2>Bảo hành</h2>
+              </div>
+              <div class="col-8">
+                <p>60 tháng đổi mới</p>
+              </div>
+            </div>
+      
+            <div class="col-12 text-center">
+              <button class="btn" (click)="toggleShowMore()">Ẩn bớt</button>
+            </div>
+          </div>
+      
+          <div class="row mt-4" *ngIf="!showMore">
+            <div class="col-12 text-center">
+              <button class="btn" (click)="toggleShowMore()">Xem thêm</button>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="infor-fix">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <h4>60%</h4>
+        <p>Nhưng đầy đủ chức năng như layout TKL</p>
+      </div>
+      <div class="col-lg-4 mid">
+        <h4>Bluetooth</h4>
+        <p>Chuẩn kết nối 5.1 tiết kiệm pin</p>
+      </div>
+      <div class="col-lg-4">
+        <h4>60 tháng</h4>
+        <p>Bảo hành đổi mới</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="advantage">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-6 advantage-img">
+          <img src="https://www.phongcachxanh.vn/cdn/shop/files/Filco_Minila_R_Convertible_1.jpg?v=1678703296&width=700" alt="">
+        </div>
+        <div class="col-md-6 advantage-text">
+          <div class="text-child">
+            <h1>Kết nối và sử dụng linh hoạt</h1>
+            <p class="mt-4">Với khả năng kết nối tới 5 thiết bị, bao gồm 4 thiết bị Bluetooth và 1 thiết bị USB, Minila-R mang đến cho bạn sự thuận tiện khi cần phải kết nối với nhiều thiết bị khác nhau như máy tính, laptop, điện thoại, máy tính bảng…</p>
+            <p class="mt-4">Điều đặc biệt về Minila-R là tính năng chuyển đổi giữa các thiết bị vô cùng nhanh chóng. Chỉ cần nhấn một nút, bạn có thể chuyển đổi giữa các thiết bị được kết nối để tiết kiệm thời gian và tăng năng suất.</p>
+            <p class="mt-4">Thiết kế nhỏ gọn giúp bạn dễ dàng mang đi bất cứ đâu bạn muốn, từ văn phòng đến quán cà phê, thư viện hay các cuộc họp trực tuyến.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        
+          
+        <div class="col-md-6 advantage-img">
+          <img src="https://www.phongcachxanh.vn/cdn/shop/files/Filco_Minila_R_Convertible_1.jpg?v=1678703296&width=700" alt="">
+        </div>
+        <div class="col-md-6 advantage-text">
+        <div class="text-child">
+          <h1>Kết nối và sử dụng linh hoạt</h1>
+          <p class="mt-4">Với khả năng kết nối tới 5 thiết bị, bao gồm 4 thiết bị Bluetooth và 1 thiết bị USB, Minila-R mang đến cho bạn sự thuận tiện khi cần phải kết nối với nhiều thiết bị khác nhau như máy tính, laptop, điện thoại, máy tính bảng…</p>
+          <p class="mt-4">Điều đặc biệt về Minila-R là tính năng chuyển đổi giữa các thiết bị vô cùng nhanh chóng. Chỉ cần nhấn một nút, bạn có thể chuyển đổi giữa các thiết bị được kết nối để tiết kiệm thời gian và tăng năng suất.</p>
+          <p class="mt-4">Thiết kế nhỏ gọn giúp bạn dễ dàng mang đi bất cứ đâu bạn muốn, từ văn phòng đến quán cà phê, thư viện hay các cuộc họp trực tuyến.</p>
+        </div>
+      </div>
+        
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 advantage-img">
+          <img src="https://www.phongcachxanh.vn/cdn/shop/files/Filco_Minila_R_Convertible_1.jpg?v=1678703296&width=700" alt="">
+        </div>
+        <div class="col-md-6 advantage-text">
+          <div class="text-child">
+            <h1>Kết nối và sử dụng linh hoạt</h1>
+            <p class="mt-4">Với khả năng kết nối tới 5 thiết bị, bao gồm 4 thiết bị Bluetooth và 1 thiết bị USB, Minila-R mang đến cho bạn sự thuận tiện khi cần phải kết nối với nhiều thiết bị khác nhau như máy tính, laptop, điện thoại, máy tính bảng…</p>
+            <p class="mt-4">Điều đặc biệt về Minila-R là tính năng chuyển đổi giữa các thiết bị vô cùng nhanh chóng. Chỉ cần nhấn một nút, bạn có thể chuyển đổi giữa các thiết bị được kết nối để tiết kiệm thời gian và tăng năng suất.</p>
+            <p class="mt-4">Thiết kế nhỏ gọn giúp bạn dễ dàng mang đi bất cứ đâu bạn muốn, từ văn phòng đến quán cà phê, thư viện hay các cuộc họp trực tuyến.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="question">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col-md-6">
+          <h1>Phong Cách Xanh luôn sẵn sàng trả lời</h1>
+          <p>Nếu bạn cần biết thêm chi tiết về sản phẩm Bàn phím cơ Filco Majestouch Minila-R Convertible, xin vui lòng đặt câu hỏi bằng cách click vào nút bên dưới.</p>
+          <button class="btn btn-1 btn-primary mt-3">Đặt câu hỏi</button>
+        </div>
+        <div class="col-md-6 left">
+          <div class="table mt-4">
+            <div class="row mt-3">
+              <div class="col-md-10">
+                <p style="margin: 0;">Filco Minila-R Convertible có tương thích với Mac?</p>
+              </div>
+              <div class="col-md-2 text-end">
+                <i class="fa-solid fa-angle-down" 
+                  [ngClass]="{'angle-up': showMore}" 
+                  (click)="toggleShowMore()" *ngIf="!showMore ? !showMore : showMore">
+                </i>
+              </div>
+              <div class="text" *ngIf="showMore">
+                <p>Bàn phím cơ không dây Filco Minila-R Convertible tương thích với Mac. Chỉ cần gạt công tắt số 5 ở mặt sau là sẵn  sàng để sử dụng mà không cần thêm thao tác phức tạp.</p>
+                <p>Hãng cũng tặng kèm các keycap command và option để bạn thay thế cho các keycap Windows gắn sẵn.</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-10">
+                <p style="margin: 0;">Filco Minila-R Convertible có tương thích với Mac?</p>
+              </div>
+              <div class="col-md-2 text-end">
+                <i class="fa-solid fa-angle-down" 
+                  [ngClass]="{'angle-up': showMore}" 
+                  (click)="toggleShowMore()" *ngIf="!showMore ? !showMore : showMore">
+                </i>
+              </div>
+              <div class="text" *ngIf="showMore">
+                <p>Bàn phím cơ không dây Filco Minila-R Convertible tương thích với Mac. Chỉ cần gạt công tắt số 5 ở mặt sau là sẵn  sàng để sử dụng mà không cần thêm thao tác phức tạp.</p>
+                <p>Hãng cũng tặng kèm các keycap command và option để bạn thay thế cho các keycap Windows gắn sẵn.</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-10">
+                <p style="margin: 0;">Filco Minila-R Convertible có tương thích với Mac?</p>
+              </div>
+              <div class="col-md-2 text-end">
+                <i class="fa-solid fa-angle-down" 
+                  [ngClass]="{'angle-up': showMore}" 
+                  (click)="toggleShowMore()" *ngIf="!showMore ? !showMore : showMore">
+                </i>
+              </div>
+              <div class="text" *ngIf="showMore">
+                <p>Bàn phím cơ không dây Filco Minila-R Convertible tương thích với Mac. Chỉ cần gạt công tắt số 5 ở mặt sau là sẵn  sàng để sử dụng mà không cần thêm thao tác phức tạp.</p>
+                <p>Hãng cũng tặng kèm các keycap command và option để bạn thay thế cho các keycap Windows gắn sẵn.</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-10">
+                <p style="margin: 0;">Filco Minila-R Convertible có tương thích với Mac?</p>
+              </div>
+              <div class="col-md-2 text-end">
+                <i class="fa-solid fa-angle-down" 
+                  [ngClass]="{'angle-up': showMore}" 
+                  (click)="toggleShowMore()" *ngIf="!showMore ? !showMore : showMore">
+                </i>
+              </div>
+              <div class="text" *ngIf="showMore">
+                <p>Bàn phím cơ không dây Filco Minila-R Convertible tương thích với Mac. Chỉ cần gạt công tắt số 5 ở mặt sau là sẵn  sàng để sử dụng mà không cần thêm thao tác phức tạp.</p>
+                <p>Hãng cũng tặng kèm các keycap command và option để bạn thay thế cho các keycap Windows gắn sẵn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="favourite">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 header">
+        <h1>Có thể bạn thích</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="product-col col-6 col-lg-3 col-md-4 mt-4 mb-4">
+        <div class="image-container mb-5">
+          <img
+            src="https://news.phongcachxanh.vn/wp-content/uploads/2020/12/banphimco_Cac-ban-phim-co-Filco-TKL.png"
+            alt=""
+            class="original-image"
+          />
+          <button
+            class="btn btn-primary view-more"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom11"
+            aria-controls="offcanvasBottom"
+          >
+            + Thêm nhanh
+          </button>
+        </div>
+        <div class="d-flex justify-content-between">
+          <a class="name-product" href="#">Chuột không dây Logitech MX Master 3S Wireless</a>
+          <div class="star d-flex">5.0<i class="fa fa-star"></i></div>
+        </div>
+        <p class="price-product mt-1">462.000₫₫</p>
+        <div class="option-img">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="evaluate">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-4 text-center">
+        <h4><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>5.00 trên 5 sao</h4>
+        <p>Dựa trên 6 đánh giá </p>
+      </div>
+      <div class="col-lg-4 mid text-center">
+        <p>Phản hồi từ khách hàng</p>
+        
+      </div>
+      <div class="col-lg-4 text-center">
+        <button class="btn btn-primary" (click)="toggleShowComment()" *ngIf="!showComment ? !showComment : showComment">
+          Đặt một câu hỏi
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngIf="showComment" style="transition: 0.5s;">
+    <div class="row form-comment text-center justify-content-center">
+      <div class="col-md-5">
+        <h1>Đặt một câu hỏi</h1>
+        <p class="mt-4">Tên</p>
+        <input class="mt-2 py-2" type="text" placeholder="Nhập tên của bạn (công khai)">
+
+        <p class="mt-4">E-mail</p>
+        <input class="mt-2 py-2" type="text" placeholder="Nhập email của bạn (riêng tư)">
+
+        <p class="mt-4">Câu hỏi</p>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Viết câu hỏi của bạn vào đây" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="btn-container">
+      <div class="row justify-content-center">
+        <div class="col-md-3 text-center">
+          <button class="btn btn-cancel">Hủy</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3 text-center">
+          <button class="btn btn1 btn-send">Gửi câu hỏi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="comment mt-3 mb-3">
+  <div class="container">
+    <div class="row select">
+      <div class="col-md-3">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" style="padding: 0; color: #1d2864;" type="button"     data-bs-toggle="dropdown" aria-expanded="false">
+            Gần đây nhất
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Gần đây nhất</a></li>
+            <li><a class="dropdown-item" href="#">Đánh giá cao nhất</a></li>
+            <li><a class="dropdown-item" href="#">Đánh giá thấp nhất</a></li>
+            <li><a class="dropdown-item" href="#">Chỉ có ảnh</a></li>
+            <li><a class="dropdown-item" href="#">Hình ảnh đầu tiên</a></li>
+            <li><a class="dropdown-item" href="#">Video đầu tiên</a></li>
+            <li><a class="dropdown-item" href="#">Hữu ích nhất</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row list-comment">
+        <div class="col-md-12">
+          <div class="row header-list mt-3">
+            <div class="col-md-6">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star">
+              </i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <div class="col-md-6 text-end">
+              <p>06/07/2023</p>
+            </div>
+          </div>
+          <div class="row user mt-1">
+            <div class="col-md-12">
+              <p><i class="fa-regular fa-user" style="margin-right: 5px;"></i>Pham Ngoc Uyn <span>đã mua hàng</span></p>
+            </div>
+          </div>
+          <div class="row write-comment">
+              <div class="col-md-12">
+                <h1>Đánh giá bàn phím Filco minilar R, Mx brown</h1>
+                <p>Bàn phím này có hình thức gợi cảm xúc tích cực khi làm việc. Kết nối nhanh, ổn định. Bàn phím gõ êm hơn tưởng tượng, hành trình phím ngắn, âm thanh nhỏ,... làm việc ban đêm, làm việc ở chỗ đông người... không sợ làm phiền người khác. Do đã từng dùng bàn phím IKBC nên mới đầu gõ bàn phím này cảm thấy không đã tay, tuy nhiên nếu dùng để gõ văn bản thì khá phù hợp, tốc độ nhanh, vẫn có cảm giác cơ học. Với loại bàn phím này, muốn có sự yên tĩnh, có lẽ cũng không cần phải mua Mx Red. Khi ra quán cafe làm việc cũng rất tiện. Bản màu đen ở ngoài đẹp hơn trên website, mang lại một cảm giác trầm lắng, ổn định và bền bỉ (sẽ phù hợp với những ai có thiên hướng đó). Nhìn chung, đây là một bàn phím tốt, phù hợp với công việc văn phòng</p>
+                <img src="https://hacom.vn/media/lib/10-08-2022/huong-dan-cach-chup-man-hinh-may-tinh-laptop-khong-can-phan-mem-14.jpg" alt="">
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="evaluates">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-3 text-end mt-3">
+              <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  <i class="fa fa-star" style="margin-right: 5px;"></i>483 đánh giá
+              </p>
+          </div>
+          <div class="col-md-6">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/auth/platinum.svg?auto=format" alt="">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tran/platinum.svg?auto=format" alt="">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/ver_rev/gold.svg?auto=format" alt="">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/mon_rec/gold.svg?auto=format" alt="">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tops/5-percent.svg?auto=format" alt="">
+              <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tops_trend/5-percent.svg?auto=format" alt="">
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utilities">
+  <div class="container">
+      <div class="row justify-content-center text-center">
+          <div class="col-md-3">
+              <i class="fas fa-truck"></i>
+              <h1>Mua sắm không chờ đợi!</h1>
+              <p>Giao hàng siêu tốc chỉ trong 2 giờ</p>
+          </div>
+          <div class="col-md-3">
+              <i class="fas fa-gift"></i>
+              <h1>Mua sắm thông minh!</h1>
+              <p>Giao hàng miễn phí cho đơn hàng từ 1.000.000đ trở lên</p>
+          </div>
+          <div class="col-md-3">
+              <i class="far fa-smile"></i>
+              <h1>An tâm tuyệt đối!</h1>
+              <p>Bảo hành nhanh chóng, chỉ trong 15 phút</p>
+          </div>
+          <div class="col-md-3">
+              <i class="fas fa-camera"></i>
+              <h1>Mua sắm linh hoạt!</h1>
+              <p>Trả góp hoặc mua trước trả sau, đơn giản và nhanh chóng</p>
+          </div>
+      </div>
+  </div>
+</div>
+</div>

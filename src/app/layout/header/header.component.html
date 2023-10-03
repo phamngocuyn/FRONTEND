@@ -1,0 +1,308 @@
+
+<div class="slider">
+    <div class="slider-track">
+  
+      <div class="slide">
+        <p>Miễn phí giao hàng đơn từ 1.000.000đ</p>
+      </div>
+      <div class="slide">
+        <p>MIễn phí quẹt thẻ</p>
+      </div>
+      <div class="slide">
+        <p>Hỗ trợ trả góp 0%</p>
+      </div>
+      <div class="slide">
+        <p>Giao hàng siêu tốc</p>
+      </div>
+      <div class="slide">
+        <p>Bảo hành nhanh chóng</p>
+      </div>
+  
+  
+      <div class="slide">
+        <p>Miễn phí giao hàng đơn từ 1.000.000đ</p>
+      </div>
+      <div class="slide">
+        <p>MIễn phí quẹt thẻ</p>
+      </div>
+      <div class="slide">
+        <p>Hỗ trợ trả góp 0%</p>
+      </div>
+      <div class="slide">
+        <p>Giao hàng siêu tốc</p>
+      </div>
+      <div class="slide">
+        <p>Bảo hành nhanh chóng</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <nav class="navbar navbar-expand-lg  sticky-top" #navbar>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn.shopify.com/s/files/1/0636/9044/0949/files/Logo_PCX-line.png?v=1649735521&width=2048" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+          <i class="fa-solid fa-bars" style="color: #fff;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <p class="nav-link" aria-current="page" href="#">Sản phẩm
+                  <i style="margin-left: 5px; font-size: 15px;" 
+                  class="fa-solid fa-angle-down"
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"
+                  ></i>
+              </p>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="collections/dich-vu">Dịch vụ</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="/news">Tin tức</a>
+            </li>
+            <li class="nav-item mx-3" >
+              <a class="nav-link" aria-current="page" href="/accumulate">Tích điểm</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="/contact">Liên hệ</a>
+            </li>
+            
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item mx-3" style="color: aliceblue;font-size: 18px;">
+                  <i class="fa-solid fa-magnifying-glass"
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                  ></i>
+              </li>
+              <li class="nav-item mx-3" style="color: aliceblue;font-size: 18px;">
+                  <i routerLink="/auth/login" class="fa-regular fa-user"></i>
+              </li>
+              <li class="nav-item mx-3" style="color: aliceblue;font-size: 18px;">
+                  <i class="fa-solid fa-cart-shopping"
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1"
+                  style="cursor: pointer;"
+                  ></i><span class="totalitem">{{ totalItems }}</span>
+              </li>
+              
+            </ul>
+          
+        </div>
+      </div>
+    </nav>
+  
+    <!--Model sản phẩm-->
+    <div class="offcanvas offcanvas-start model-sanpham" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;" 
+        data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">
+          <a href="/">Bundle</a>
+          <i class="fa-solid fa-angle-right"
+          ></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Chuột</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Bàn phím cơ</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Lót chuột</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Bundle</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Feet chuột & Grip tape</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Phụ kiện bàn phím cơ</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Linh kiện PC</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Ghế công thái học</a>
+          <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Setup góc làm việc</a>
+          
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Tai nghe</a>
+          
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Thiết bị cân màu</a>
+          
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Tay cầm chơi game</a>
+          
+        </span>
+        <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+          <a href="/">Playstation 5</a>
+        </span>
+      </div>
+    </div>
+    <!--model bundle-->
+    <div class="offcanvas offcanvas-start model-sanpham1" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+            <a href="/">Bundle</a>
+            <i class="fa-solid fa-angle-right"
+            data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"
+            ></i>
+          </span>
+          <span style="display: flex; justify-content: space-between;margin-left: 20px; margin: 20px;">
+            <a href="/">Chuột</a>
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+          
+      </div>
+    </div>
+  
+  <!--model-search-->
+  <div class="offcanvas offcanvas-end model-search" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header header-search">
+      <input type="text" style="border: none; outline: none;" placeholder="Tìm kiếm ..." (input)="searchProducts($event)">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="container">
+        <div class="row header-list">
+          <div class="col-md-3">Sản phẩm</div>
+          <div class="col-md-3">Danh mục</div>
+          <div class="col-md-3">Trang</div>
+        </div>
+        <div *ngIf="hasSearched && products.length > 0">
+          <div class="row body-search d-flex mt-3" *ngFor="let product of products">
+            <div class="col-2 mt-2">
+              <img [src]="product.url" alt="">
+            </div>
+            <div class="col-9 mt-2">
+              <h2 [routerLink]="['product-detail', product.id]">{{ product.name }}</h2>
+              <h3>{{ product.options[0].layout[0].optioncolor[0].optionswitch[0].price }} VND</h3>
+            </div>
+          </div> 
+        </div>
+        <div *ngIf="hasSearched && products.length === 0">
+          <div class="row mt-3">
+            <div class="col-12" style="font-size: 16px; font-weight: 600;">Không có kết quả tìm kiếm.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--model-cart-->
+  <div class="offcanvas offcanvas-end model-cart" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header header-cart1">
+      <div class="header-cart" style="margin-top: -10px;">
+        <h1>Giỏ hàng <span>{{ totalItems }}</span></h1>
+        <p>Bạn được giao hàng miễn phí!</p>
+      </div>
+      <button type="button" style="margin-top: -80px;" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body offcanvas-body1">
+        <div class="container">
+          <div class="row body-cart" *ngFor="let item of cartItems; let i=index;">
+            <div class="col-2">
+              <img [src]="item.imageUrl" alt="">
+            </div>
+            <div class="col-9">
+              <h2>{{ item.name }}</h2>
+              <h3>{{ item.totalPrice }} VND</h3>
+              <p>{{ item.layout }}<span *ngIf="item.layout">/</span>
+                {{ item.color }}<span *ngIf="item.color">/</span>{{ item.switch }}
+              </p>
+            </div>
+            <div class="col-1 text-center">
+              <input type="text" style="text-align: center;" [value]="item.quantity" 
+                                (change)="updateQuantity(i, $event)"
+              />
+              <div class="btn-remove" (click)="removeItemFromCart(i)">Bỏ</div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Tổng</h1>
+          </div>
+          <div class="col">
+            <h2>{{ totalPrices }} VND</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Đã bao gồm thuế; <span>Phí ship</span> sẽ được tính khi thanh toán</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span>Thêm ghi chú</span>
+          </div>
+        </div>
+        <div class="row buy-cart mt-4 d-flex justify-content-center">
+          <div class="col-6">
+            <button class="btn btn-1 btn-primary" routerLink="checkout/cart"
+                    data-bs-dismiss="offcanvas" aria-label="Close">
+                    Xem giỏ hàng
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-2 btn-primary"><i class="fa-solid fa-lock" style="margin-right: 5px;"></i>Thanh toán</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <!--
+    <div class="offcanvas offcanvas-end model-cart" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body model-cart-body mx-auto">
+      <span><i class="fa-solid fa-cart-shopping"></i></span>
+      <p>Chưa có sản phẩm</p>
+      <button class="btn btn-primary" type="submit">Button</button>
+    </div>
+  </div>
+  -->
+  
+  
+  
+  
+  
+  
+  
